@@ -1,0 +1,12 @@
+@import "index.scss";
+@import "MenuHamburger.scss";
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: yellow;
+  z-index: 100;
+
+  .header__logo {
+    text-transform: uppercase;
+  }
+}

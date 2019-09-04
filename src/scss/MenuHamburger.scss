@@ -1,0 +1,66 @@
+.nav {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+.nav__Menu {
+  display: flex;
+
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: red;
+  z-index: 1;
+}
+.nav__Menu__Hamburger {
+  color: white;
+  font-size: 25px;
+  border: 1px solid white;
+  padding: 5px;
+  cursor: pointer;
+}
+.nav > ul {
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  transform: translateY(-100%);
+}
+.nav__Menu__Hamburger__Link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+  cursor: default;
+}
+.nav__Menu__Hamburger__Link > a {
+  display: inline-block;
+  border-bottom: 1px solid white;
+  text-decoration: none;
+  color: white;
+}
+.nav__Menu__Hamburger__Link:hover {
+  border-bottom: 1px solid white;
+}
+
+.hideMenu {
+  animation: hideMenu 1s both;
+}
+.showMenu {
+  animation: showMenu 1s both;
+}
+@keyframes hideMenu {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes showMenu {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

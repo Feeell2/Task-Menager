@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav__Menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px;
+  background-color: red;
+  z-index: 1;
+}
+
+.nav__Menu__Hamburger {
+  color: white;
+  font-size: 25px;
+  border: 1px solid white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav > ul {
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.nav__Menu__Hamburger__Link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+  cursor: default;
+}
+
+.nav__Menu__Hamburger__Link > a {
+  display: inline-block;
+  border-bottom: 1px solid white;
+  text-decoration: none;
+  color: white;
+}
+
+.nav__Menu__Hamburger__Link:hover {
+  border-bottom: 1px solid white;
+}
+
+.hideMenu {
+  -webkit-animation: hideMenu 1s both;
+          animation: hideMenu 1s both;
+}
+
+.showMenu {
+  -webkit-animation: showMenu 1s both;
+          animation: showMenu 1s both;
+}
+
+@-webkit-keyframes hideMenu {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes showMenu {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes showMenu {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: yellow;
+  z-index: 100;
+}
+
+.header .header__logo {
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=App.css.map */
