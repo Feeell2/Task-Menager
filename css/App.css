@@ -122,6 +122,10 @@ code {
   }
 }
 
+.active {
+  color: yellow !important;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

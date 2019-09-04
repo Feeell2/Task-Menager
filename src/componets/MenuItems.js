@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MenuItems = props => {
   // const handleMenu = props => {
@@ -15,13 +15,18 @@ const MenuItems = props => {
   return (
     <ul className={props.handleMenu}>
       <li className="nav__Menu__Hamburger__Link">
-        <Link to="/addProject">Dodaj projekt</Link>
+        <NavLink exact to="/">
+          Strona startowa
+        </NavLink>
       </li>
       <li className="nav__Menu__Hamburger__Link">
-        <Link to="/manageTasks">Zarządzaj zadaniami</Link>
+        <NavLink to="/addProject">Dodaj projekt</NavLink>
       </li>
       <li className="nav__Menu__Hamburger__Link">
-        <Link to="/checkTasks">Sprawdź zadania</Link>
+        <NavLink to="/manageTasks">Zarządzaj zadaniami</NavLink>
+      </li>
+      <li className="nav__Menu__Hamburger__Link">
+        <NavLink to="/checkTasks">Sprawdź zadania</NavLink>
       </li>
     </ul>
   );
