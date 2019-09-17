@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import "../scss/App.scss";
 import MenuHamburger from "./menuHamburger";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import AddProject from "../page/AddProject";
-import CheckTasks from "../page/CheckTasks";
-import ManageTasks from "../page/ManageTasks";
-import HomePage from "../page/HomePage";
-import ErrorPage from "../page/ErrorPage";
+import { BrowserRouter } from "react-router-dom";
+import MainPage from "./MainPage";
 
 class App extends Component {
   constructor(props) {
@@ -35,22 +31,14 @@ class App extends Component {
         <div>
           <header className="header">
             <h1 className="header__logo">Task Manager</h1>
-          </header>
-          <main className="Main-page">
             <MenuHamburger
               click={this.handleMenuHamburger}
               stateMenu={this.state.stateHamburger}
               handleMenu={this.state.handleMenu}
             />
-            <section>
-              <Switch>
-                <Route path="/" exact component={HomePage} />
-                <Route path="/addProject" component={AddProject} />
-                <Route path="/checkTasks" component={CheckTasks} />
-                <Route path="/manageTasks" component={ManageTasks} />
-                <Route component={ErrorPage} />
-              </Switch>
-            </section>
+          </header>
+          <main className="Main-page">
+            <MainPage handleMenu={this.state.handleMenu} />
           </main>
         </div>
       </BrowserRouter>
