@@ -58,22 +58,23 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   text-decoration: none;
+  padding: 0;
 }
 
 .hideMenu {
-  -webkit-animation: hideMenu 1s both;
-          animation: hideMenu 1s both;
+  -webkit-animation: hideMenu 0.5s both;
+          animation: hideMenu 0.5s both;
 }
 
 .showMenu {
-  -webkit-animation: showMenu 1s both;
-          animation: showMenu 1s both;
+  -webkit-animation: showMenu 0.5s both;
+          animation: showMenu 0.5s both;
 }
 
 .nav__Menu__Link {
   text-align: center;
-  text-decoration: none;
   padding: 10px 0;
+  list-style-type: none;
 }
 
 .nav__Menu__Link > a {
@@ -161,9 +162,16 @@ nav {
       left: 0;
     }
   }
+  .nav__Menu__Link {
+    padding: 20px 0;
+  }
   .nav__Menu__Link:hover {
     background-color: #141414;
   }
+}
+
+.greeting {
+  text-transform: uppercase;
 }
 
 .header {
@@ -179,7 +187,7 @@ nav {
           box-shadow: inset 0px -4px 3px 0px rgba(255, 255, 255, 0.13);
 }
 
-.header .header__Hamburger {
+.header__Hamburger {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: hamburger;
@@ -195,18 +203,18 @@ nav {
           align-items: center;
 }
 
-.header .header__Hamburger > i {
+.header__Hamburger > i {
   color: white;
   font-size: 25px;
   border: 1px solid white;
   padding: 5px;
 }
 
-.header .header__Hamburger > i:hover {
+.header__Hamburger > i:hover {
   cursor: pointer;
 }
 
-.header .header__logo {
+.header__logo {
   text-transform: uppercase;
   color: white;
   font-family: "Squada One", cursive;
@@ -219,5 +227,13 @@ nav {
   grid-area: logo;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__Hamburger {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 /*# sourceMappingURL=App.css.map */

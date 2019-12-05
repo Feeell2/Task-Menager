@@ -3,7 +3,7 @@ import "../scss/App.scss";
 import MenuHamburger from "./menuHamburger";
 import { BrowserRouter } from "react-router-dom";
 import MainPage from "./MainPage";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -34,7 +34,6 @@ class App extends Component {
             <MenuHamburger
               click={this.handleMenuHamburger}
               stateMenu={this.state.stateHamburger}
-              handleMenu={this.state.handleMenu}
             />
           </header>
           <main className="Main-page">

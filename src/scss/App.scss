@@ -2,6 +2,8 @@
 @import "MenuHamburger.scss";
 @import "MainPage.scss";
 @import "MenuItems.scss";
+@import "HomePage.scss";
+@import "AddProject.scss";
 .header {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
@@ -9,31 +11,36 @@
   grid-template-areas: "hamburger logo .";
   background-color: #000000;
   box-shadow: inset 0px -4px 3px 0px rgba(255, 255, 255, 0.13);
+}
 
+.header__Hamburger {
+  grid-area: hamburger;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__Hamburger > i {
+  color: white;
+  font-size: 25px;
+  border: 1px solid white;
+  padding: 5px;
+}
+.header__Hamburger > i:hover {
+  cursor: pointer;
+}
+.header__logo {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Squada One", cursive;
+  font-size: 37px;
+  align-self: center;
+  grid-area: logo;
+  justify-self: center;
+}
+@media screen and (min-width: 1024px) {
   .header__Hamburger {
-    grid-area: hamburger;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header__Hamburger > i {
-    color: white;
-    font-size: 25px;
-    border: 1px solid white;
-    padding: 5px;
-  }
-  .header__Hamburger > i:hover {
-    cursor: pointer;
-  }
-  .header__logo {
-    text-transform: uppercase;
-    color: white;
-    font-family: "Squada One", cursive;
-    font-size: 37px;
-    align-self: center;
-    grid-area: logo;
-    justify-self: center;
+    justify-content: start;
   }
 }

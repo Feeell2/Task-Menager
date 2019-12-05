@@ -18,7 +18,7 @@ class MainPage extends Component {
         <MenuItems handleMenu={this.props.handleMenu} />
         <section className="main-page__section">
           <Switch>
-            <Route path="/" exact component={HomePage} />
+            <Route path="/" exact component={HomePage} className="greeting" />
             <Route path="/addProject" component={AddProject} />
             <Route path="/checkTasks" component={CheckTasks} />
             <Route path="/manageTasks" component={ManageTasks} />
