@@ -4,12 +4,13 @@ import MenuHamburger from "./menuHamburger";
 import { BrowserRouter } from "react-router-dom";
 import MainPage from "./MainPage";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.hamburgerMenu = document.querySelector(".nav__Menu__Hamburger__Link");
   }
-  state = { stateHamburger: false, handleMenu: "" };
+  state = { stateHamburger: false, handleMenu: "", startDate: new Date() };
 
   handleMenuHamburger = () => {
     if (this.state.stateHamburger === false) {
@@ -17,12 +18,17 @@ class App extends Component {
         stateHamburger: true,
         handleMenu: "showMenu"
       });
-    } else {
+    } else if (this.state.stateHamburger === true) {
       this.setState({
         stateHamburger: false,
         handleMenu: "hideMenu"
       });
     }
+  };
+  handleChange = date => {
+    this.setState({
+      startDate: date
+    });
   };
 
   render() {
@@ -37,7 +43,12 @@ class App extends Component {
             />
           </header>
           <main className="Main-page">
-            <MainPage handleMenu={this.state.handleMenu} />
+            <MainPage
+              click={this.handleMenuHamburger}
+              handleMenu={this.state.handleMenu}
+              handleDataPicker={this.handleChange}
+              stateData={this.startDate}
+            />
           </main>
         </div>
       </BrowserRouter>
