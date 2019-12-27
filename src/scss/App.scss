@@ -5,6 +5,9 @@
 @import "HomePage.scss";
 @import "AddProject.scss";
 @import "FormAddTask.scss";
+@import "ToDoTable.scss";
+@import "ManageTask.scss";
+@import "Task.scss";
 .header {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;

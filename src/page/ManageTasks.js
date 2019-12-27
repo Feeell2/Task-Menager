@@ -1,7 +1,15 @@
 import React from "react";
-
+import ToDoTask from "../componets/ToDoTask";
+import ToCheckTask from "../componets/ToCheckTask";
 const ManageTasks = () => {
-  return <h1>Zarządzanie zadaniami</h1>
+  return (
+    <>
+      <div className="manageTask">
+        <ToDoTask />
+        <ToCheckTask />
+      </div>
+    </>
+  );
 };
 
 export default ManageTasks;
