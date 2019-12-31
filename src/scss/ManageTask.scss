@@ -5,6 +5,9 @@
   height: 100%;
   padding: 10px;
 }
+.manageTask_title {
+  text-transform: uppercase;
+}
 @media only screen and (min-width: 768px) {
   .manageTask {
     flex-direction: row;
