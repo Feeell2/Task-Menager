@@ -1,6 +1,7 @@
 import React from "react";
 import Task from "../componets/Task";
 const style = { height: "80%" };
+
 const CheckTasks = () => {
   return (
     <div className="CheckTasks">

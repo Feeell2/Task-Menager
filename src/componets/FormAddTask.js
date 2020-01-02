@@ -23,25 +23,15 @@ class FormAddTask extends React.Component {
     };
   }
 
-  setTask = () => {
-    const task = {
-      startDate: this.data.current.value,
-      titleTask: this.title.current.value,
-      describeTask: this.data.current.value,
-      index: this.state.counter
-    };
-    return task;
-  };
-
   addTask = event => {
     event.preventDefault();
-    const task = {
-      startDate: this.state.startDate,
-      titleTask: this.state.titleTask,
-      describeTask: this.state.describeTask,
-      index: this.state.counter
-    };
 
+    const task = {
+      startDate: this.state.startDate.toLocaleDateString(),
+      titleTask: this.state.titleTask,
+      describeTask: this.state.describeTask
+      // index: this.state.counter
+    };
     this.setState(prevState => ({
       titleTask: "",
       describeTask: "",
