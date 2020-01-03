@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.hamburgerMenu = document.querySelector(".nav__Menu__Hamburger__Link");
   }
-  state = { stateHamburger: false, handleMenu: "", startDate: new Date() };
+  state = { stateHamburger: false, handleMenu: "" };
 
   handleMenuHamburger = () => {
     if (this.state.stateHamburger === false) {
@@ -46,8 +46,6 @@ class App extends Component {
             <MainPage
               click={this.handleMenuHamburger}
               handleMenu={this.state.handleMenu}
-              handleDataPicker={this.handleChange}
-              stateData={this.startDate}
             />
           </main>
         </div>

@@ -4,8 +4,7 @@ import { connect } from "react-redux";
 import { addToCheck } from "../duck/action";
 
 const mapStateToProps = state => ({
-  tasks: state.tasks,
-  tasks2: state.tasks2
+  tasks: state.tasks
 });
 const mapDispatchToProps = dispatch => ({
   addToCheck: id => dispatch(addToCheck(id))
@@ -14,12 +13,9 @@ const mapDispatchToProps = dispatch => ({
 const ToDoTask = ({ tasks, addToCheck }) => {
   const delateButton = event => {
     // console.log(event.currentTarget.getAttribute("index"));
-    event.preventDefault();
+
     const id = event.currentTarget.getAttribute("index");
-
     addToCheck(id);
-
-    console.log(id);
   };
   return (
     <ul className="ToDoTable">
@@ -30,7 +26,7 @@ const ToDoTask = ({ tasks, addToCheck }) => {
           titleTask={task.titleTask}
           describeTask={task.describeTask}
           startDate={task.startDate}
-          click={delateButton.bind(this)}
+          click={delateButton}
           index={tasks.tasks.indexOf(task)}
         />
       ))}
