@@ -7,8 +7,8 @@ const mapStateToProps = state => ({
 });
 
 const CheckTasks = ({ tasks3 }) => {
-  const delateButton = event => {
-    // console.log(event.currentTarget.getAttribute("index"));
+  const delateButton = () => {
+    return { display: "none" };
   };
   return (
     <div className="CheckTasks">
@@ -22,6 +22,7 @@ const CheckTasks = ({ tasks3 }) => {
             startDate={task.startDate}
             // click={delateButton.bind(this)}
             index={tasks3.tasks3.indexOf(task)}
+            style={delateButton()}
           />
         ))}
       </ul>

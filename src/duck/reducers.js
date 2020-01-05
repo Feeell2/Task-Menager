@@ -1,7 +1,8 @@
 import {
   CHANGE_TASKS_ARRAY,
   CHANGE_TO_TASK_ARRAY,
-  CHANGE_TO_CHECK_ARRAY
+  CHANGE_TO_CHECK_ARRAY,
+  CLOSE_NAV
 } from "./types";
 
 const INITIAL_STATE = {
@@ -9,8 +10,10 @@ const INITIAL_STATE = {
   tasks2: [],
   tasks3: []
 };
+const INITIAL_STATE1 = {
+  toggleOpen: false
+};
 export const addTasksArray = (state = INITIAL_STATE, action) => {
-  console.log(action.type);
   switch (action.type) {
     case CHANGE_TASKS_ARRAY:
       return {
@@ -32,6 +35,18 @@ export const addTasksArray = (state = INITIAL_STATE, action) => {
         tasks3: [...state.tasks3, ...state.tasks2.splice(numIndex1, 1)],
         tasks2: state.tasks2.filter(index => index !== numIndex1)
       };
+    default:
+      return state;
+  }
+};
+export const toggleNav = (state = INITIAL_STATE1, action) => {
+  switch (action.type) {
+    case CLOSE_NAV:
+      return {
+        ...state,
+        toggleOpen: !state.toggleOpen
+      };
+
     default:
       return state;
   }

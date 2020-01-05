@@ -19,11 +19,7 @@ class MainPage extends React.Component {
         <section className="main-page__section">
           <Switch>
             <Route path="/" exact component={HomePage} className="greeting" />
-            <Route
-              path="/addProject"
-              component={AddProject}
-              tasks={this.state.tasks}
-            />
+            <Route path="/addProject" component={AddProject} />
             <Route path="/checkTasks" component={CheckTasks} />
             <Route path="/manageTasks" component={ManageTasks} />
             <Route component={ErrorPage} />
