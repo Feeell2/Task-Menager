@@ -3,15 +3,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { connect } from "react-redux";
 import { add } from "../duck/action";
-// import { addTasksArray } from "../duck/reducers";
-// const mapStateToProps = state => ({
-//   tasks: state.addTasksArray
-// });
+
 const mapDispatchToProps = dispatch => {
   return { dispatchAddToSaved: task => dispatch(add(task)) };
 };
 
-// import Task from "./Task";
 class FormAddTask extends React.Component {
   constructor(props) {
     super(props);

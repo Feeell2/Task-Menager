@@ -9,7 +9,6 @@ const Task = props => {
       <button
         className="Task_button"
         onClick={props.click}
-        entry={props.index}
         index={props.index}
         style={props.style}
       >

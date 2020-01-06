@@ -11,10 +11,7 @@ const mapDispatchToProps = dispatch => ({
 });
 const ToCheckTask = ({ tasks2, addCheck }) => {
   const delateButtonCheck = event => {
-    // console.log(event.currentTarget.getAttribute("index"));
-
     const id = event.currentTarget.getAttribute("index");
-
     addCheck(id);
   };
   return (
